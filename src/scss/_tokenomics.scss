@@ -1,0 +1,168 @@
+.tokenomics {
+  padding-bottom: 28px;
+
+  .title {
+    width: fit-content;
+    margin: 10px auto 0;
+    padding: 16px 10px;
+    transform: rotate(2deg);
+    background-color: var(--red);
+    border: 1px solid var(--white);
+    border-radius: 12px;
+    white-space: nowrap;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 28px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  // .tokenomics__inner
+
+  &__inner {}
+
+  // .tokenomics__head
+
+  &__head {}
+
+  // .tokenomics__head-pic
+
+  &__head-pic {
+    margin: -40px -40px 0;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  // .tokenomics__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  ul {
+    list-style: initial;
+    padding: 0 20px;
+  }
+
+  li {
+    list-style: initial;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 115%;
+    color: var(--white);
+  }
+
+  // .tokenomics__texts
+
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  // .tokenomics__text
+
+  &__text {
+    padding: 0 20px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 120%;
+    color: var(--white);
+  }
+
+  // .tokenomics__text--lage
+
+  &__text--lage {
+    position: relative;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--white);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 10px;
+      height: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.5094 1.6084C6.4477 1.6084 8.0188 3.1797 8.0188 5.1179C8.0188 7.0561 6.4477 8.6273 4.5094 8.6273C2.5713 8.6273 1 7.0561 1 5.1179C1 3.1797 2.5713 1.6084 4.5094 1.6084Z' fill='white' stroke='%23FF0018' stroke-width='2' stroke-miterlimit='16' /%3E%3C/svg%3E");
+    }
+  }
+
+  // .tokenomics__pic
+
+  &__pic {
+    position: relative;
+    padding: 20px;
+    margin: 0 -20px;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    &--car {
+      .tokenomics__pic-text {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 200px;
+      }
+    }
+
+    &--border {
+      margin-top: -80px;
+
+      .tokenomics__pic-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 260px;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  // .tokenomics__pic-text
+
+  &__pic-text {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--white);
+
+    span {
+      color: var(--red);
+    }
+  }
+
+  // .tokenomics__pic-text--large
+
+  &__pic-text--large {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--white);
+
+    span {
+      color: var(--red);
+    }
+  }
+}

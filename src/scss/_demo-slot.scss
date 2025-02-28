@@ -1,0 +1,43 @@
+.demo-slot {
+  padding-bottom: 28px;
+
+  .title {
+    width: fit-content;
+    margin: 10px auto 0;
+    padding: 16px 10px;
+    transform: rotate(2deg);
+    background-color: var(--red);
+    border: 1px solid var(--white);
+    border-radius: 12px;
+    white-space: nowrap;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 28px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .tokenomics__head {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: initial;
+    padding: 0 20px;
+  }
+
+  li {
+    list-style: initial;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 115%;
+    color: var(--white);
+  }
+
+  // .demo-slot__inner
+
+  &__inner {}
+
+
+}

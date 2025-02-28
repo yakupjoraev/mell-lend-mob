@@ -1,0 +1,179 @@
+.roadmap {
+  padding-bottom: 60px;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  // .roadmap__inner
+
+  &__inner {
+    position: relative;
+  }
+
+  .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    margin: 10px auto 0;
+    padding: 16px 10px;
+    background-color: var(--red);
+    border: 1px solid var(--white);
+    border-radius: 12px;
+    white-space: nowrap;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 28px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  // .roadmap__head
+
+  &__head {
+    position: relative;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 20px;
+  }
+
+  // .roadmap__head-pic
+
+  &__head-pic {
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  // .roadmap__stages
+
+  &__stages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+
+    @media (max-width: $breakpoint768) {
+      margin-left: -10px;
+      margin-right: -10px;
+      padding: 0 10px;
+      row-gap: 20px;
+      background-image: url('../img/roadmap-money.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: bottom;
+    }
+  }
+
+  // .roadmap__stage
+
+  &__stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    min-height: 248px;
+    height: fit-content;
+    padding: 20px;
+    border: 4px solid var(--red);
+    background-color: #262626;
+    border-radius: 14px;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint992) {
+      min-height: 200px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      min-height: 100px;
+      width: 100%;
+      max-width: 286px;
+
+      &:nth-child(even) {
+        margin-left: auto;
+
+        .roadmap__stage-info {
+          text-align: right;
+        }
+      }
+
+      &:nth-child(odd) {
+        margin-right: auto;
+
+        .roadmap__stage-info {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  // .roadmap__stage-head
+
+  &__stage-head {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    border: 4px solid #262626;
+    border-radius: 8px;
+    width: 240px;
+    height: 84px;
+    padding: 10px;
+    margin-top: -20px;
+    margin-right: -20px;
+
+    text-align: center;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 42px;
+    letter-spacing: 0.01em;
+    color: var(--white);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 28px;
+      width: 200px;
+      height: 60px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+      height: 28px;
+      width: 124px;
+    }
+  }
+
+  // .roadmap__stage-info
+
+  &__stage-info {
+    margin-top: 20px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 109%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--white);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+    }
+  }
+
+  // .roadmap__pic
+
+  &__pic {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
