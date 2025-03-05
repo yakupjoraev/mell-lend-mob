@@ -47,13 +47,19 @@
     }
 
     @media (max-width: $breakpoint768) {
-      @media (max-width: $breakpoint768) {
-        min-height: calc(100dvh - 180px);
-      }
+      min-height: calc(100dvh - 180px);
 
       .title {
         margin-bottom: 10px;
         text-align: center;
+      }
+    }
+
+    @media (max-width: 381px) {
+      min-height: calc(100dvh - 120px);
+
+      .title {
+        font-size: 24px;
       }
     }
   }
@@ -81,6 +87,10 @@
       font-size: 19px;
       text-align: center;
       padding: 0 100px;
+    }
+
+    @media (max-width: 381px) {
+      font-size: 16px;
     }
   }
 
@@ -113,6 +123,7 @@
       padding: 12px 10px 10px;
       border-radius: 12px;
     }
+
   }
 
   // .hero__time-head
@@ -300,6 +311,11 @@
         width: 100%;
         height: auto;
       }
+    }
+
+    @media (max-width: 381px) {
+      top: auto;
+      bottom: -100px;
     }
   }
 }
