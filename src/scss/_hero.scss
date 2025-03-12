@@ -8,6 +8,7 @@
 
   @media (max-width: $breakpoint768) {
     min-height: calc(100dvh - 80px);
+    padding-bottom: 0;
 
     &::before {
       content: '';
@@ -25,7 +26,9 @@
 
   // .hero__inner
 
-  &__inner {}
+  &__inner {
+    position: relative;
+  }
 
   // .hero__head
 
@@ -47,7 +50,7 @@
     }
 
     @media (max-width: $breakpoint768) {
-      min-height: calc(100dvh - 180px);
+      // min-height: calc(100dvh - 180px);
 
       .title {
         margin-bottom: 10px;
@@ -56,7 +59,7 @@
     }
 
     @media (max-width: 381px) {
-      min-height: calc(100dvh - 120px);
+      // min-height: calc(100dvh - 120px);
 
       .title {
         font-size: 24px;
@@ -117,7 +120,11 @@
     }
 
     @media (max-width: $breakpoint768) {
-      position: relative;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
       z-index: 2;
       margin-top: auto;
       padding: 12px 10px 10px;
@@ -299,11 +306,12 @@
     z-index: -1;
 
     @media (max-width: $breakpoint768) {
-      top: auto;
-      bottom: 0;
-      width: 100%;
+      position: relative;
+      width: calc(100% + 20px);
       height: auto;
       left: 0;
+      top: 0;
+      margin: 0 -10px;
       z-index: 1;
 
       img {
@@ -311,11 +319,6 @@
         width: 100%;
         height: auto;
       }
-    }
-
-    @media (max-width: 381px) {
-      top: auto;
-      bottom: -100px;
     }
   }
 }

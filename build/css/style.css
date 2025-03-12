@@ -375,6 +375,10 @@ body.locked {
   padding: 40px 0 96px;
 }
 
+.hero__inner {
+  position: relative;
+}
+
 .hero__head {
   position: relative;
   z-index: 2;
@@ -1550,6 +1554,7 @@ body.locked {
 
   .hero {
     min-height: calc(100dvh - 80px);
+    padding-bottom: 0;
   }
 
   .hero::before {
@@ -1567,10 +1572,6 @@ body.locked {
     z-index: 1;
   }
 
-  .hero__info {
-    min-height: calc(100dvh - 180px);
-  }
-
   .hero__info .title {
     margin-bottom: 10px;
     text-align: center;
@@ -1583,7 +1584,13 @@ body.locked {
   }
 
   .hero__time {
-    position: relative;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
     z-index: 2;
     margin-top: auto;
     padding: 12px 10px 10px;
@@ -1635,11 +1642,12 @@ body.locked {
   }
 
   .hero__bg {
-    top: auto;
-    bottom: 0;
-    width: 100%;
+    position: relative;
+    width: calc(100% + 20px);
     height: auto;
     left: 0;
+    top: 0;
+    margin: 0 -10px;
     z-index: 1;
   }
 
@@ -1712,21 +1720,12 @@ body.locked {
 }
 
 @media (max-width: 381px) {
-  .hero__info {
-    min-height: calc(100dvh - 120px);
-  }
-
   .hero__info .title {
     font-size: 24px;
   }
 
   .hero__text {
     font-size: 16px;
-  }
-
-  .hero__bg {
-    top: auto;
-    bottom: -100px;
   }
 }
 
