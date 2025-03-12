@@ -1240,6 +1240,10 @@ body.locked {
   color: var(--white);
 }
 
+.roadmap__stage-info p {
+  font-family: var(--font-family);
+}
+
 .roadmap__pic {
   position: absolute;
   top: 0;
@@ -1685,7 +1689,11 @@ body.locked {
   }
 
   .roadmap__stage-info {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .about__block-text {
+    font-size: 16px;
   }
 }
 
